@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ciphersoapws.sephcordovano.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ciphersoapws.sephcordovano.com/">
+
+<xs:element name="CipherArgumentException" type="tns:CipherArgumentException"/>
+
+<xs:element name="cipher" type="tns:cipher"/>
+
+<xs:element name="cipherResponse" type="tns:cipherResponse"/>
+
+<xs:element name="decipher" type="tns:decipher"/>
+
+<xs:element name="decipherResponse" type="tns:decipherResponse"/>
+
+<xs:element name="validateArguments" type="tns:validateArguments"/>
+
+<xs:element name="validateArgumentsResponse" type="tns:validateArgumentsResponse"/>
+
+<xs:complexType name="validateArguments">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validateArgumentsResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="CipherArgumentException">
+<xs:sequence>
+<xs:element name="faultInfo" type="tns:cipherFaultBean" minOccurs="0"/>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cipherFaultBean">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cipher">
+<xs:sequence>
+<xs:element name="txt" type="xs:string" minOccurs="0"/>
+<xs:element name="shift" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cipherResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="decipher">
+<xs:sequence>
+<xs:element name="txt" type="xs:string" minOccurs="0"/>
+<xs:element name="shift" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="decipherResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
